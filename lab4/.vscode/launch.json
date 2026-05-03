@@ -1,0 +1,58 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run HTTP Server",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "lab4.http_server",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "justMyCode": true,
+            "args": [
+                "--host",
+                "127.0.0.1",
+                "--port",
+                "8080",
+                "--root",
+                "."
+            ]
+        },
+        {
+            "name": "Run HTTP Client: GET /index.html",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "lab4.http_client",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "justMyCode": true,
+            "args": [
+                "GET",
+                "/index.html",
+                "--host",
+                "127.0.0.1",
+                "--port",
+                "8080"
+            ]
+        },
+        {
+            "name": "Run HTTP Client: POST /note.txt",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "lab4.http_client",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "justMyCode": true,
+            "args": [
+                "POST",
+                "/note.txt",
+                "--host",
+                "127.0.0.1",
+                "--port",
+                "8080",
+                "--body",
+                "hello world"
+            ]
+        }
+    ]
+}
