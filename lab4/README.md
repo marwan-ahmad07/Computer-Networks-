@@ -1,19 +1,13 @@
-# Run Commands
+# Application Layer: HTTP Protocol and Reliable UDP
 
-## Terminal 1 (Server)
+## Overview
+This laboratory involves building custom implementations of core web protocols from scratch. It bridges the gap between application-layer web serving and transport-layer reliability mechanisms.
 
-```powershell
-python -m lab4.http_server --host 127.0.0.1 --port 8080 --root .
-```
+## Objectives
+- Implement a custom HTTP Server and Client to handle basic web requests and serve HTML content.
+- Engineer a custom Reliable UDP protocol on top of standard UDP to ensure packet delivery.
+- Simulate TCP-like reliability mechanisms such as acknowledgments and packet retransmissions.
 
-## Terminal 2 (Client GET)
-
-```powershell
-python -m lab4.http_client GET /index.html --host 127.0.0.1 --port 8080
-```
-
-## Terminal 2 (Client POST)
-
-```powershell
-python -m lab4.http_client POST /note.txt --host 127.0.0.1 --port 8080 --body "hello world"
-```
+## Technical Details
+- **Language**: Python
+- **Components**: HTTP Server, HTTP Client, Reliable UDP Module
